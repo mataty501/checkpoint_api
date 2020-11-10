@@ -19,12 +19,10 @@ const UserList = () => {
     }, [])
     return (
         <div>
-
-            {listOfUser ? listOfUser.map((elm) => {
+            {listOfUser && listOfUser.map((elm) => {
                 return <Card name={elm.name} username={elm.username} email={elm.email} />;
-            }) : ""}
+            })}
 
-            {console.log(listOfUser)}
         </div>
     )
 }
